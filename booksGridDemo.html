@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        main {
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows:  repeat(2, 1fr);
+            grid-gap: 100px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <title>Мои любимые книги</title>
+</head>
+<body>
+    <h1>Мои любимые книги</h1>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Название книги</th>
+                    <th>Автор</th>
+                    <th>Жанр</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Война и мир</td>
+                    <td>Лев Толстой</td>
+                    <td>Роман</td>
+                </tr>
+                <tr>
+                    <td>1984</td>
+                    <td>Джордж Оруэлл</td>
+                    <td>Фантастика</td>
+                </tr>
+                <tr>
+                    <td>Мастер и Маргарита</td>
+                    <td>Михаил Булгаков</td>
+                    <td>Фэнтези</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form>
+            <label for="bookName">Название книги:</label>
+            <input type="text" id="bookName" name="bookName" required>
+
+            <label for="author">Автор:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="genre">Жанр:</label>
+            <input type="text" id="genre" name="genre" required>
+
+            <input type="submit" value="Добавить книгу">
+        </form>
+    </main>
+</body>
+</html>

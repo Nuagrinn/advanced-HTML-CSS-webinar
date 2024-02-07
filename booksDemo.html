@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои любимые книги</title>
+</head>
+<body>
+    <h1>Мои любимые книги</h1>
+    <table border="1" cellpadding="10" cellspacing="0" width="50%" align="center">
+        <thead>
+            <tr>
+                <th>Название книги</th>
+                <th>Автор</th>
+                <th>Жанр</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Война и мир</td>
+                <td>Лев Толстой</td>
+                <td>Роман</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>Джордж Оруэлл</td>
+                <td>Фантастика</td>
+            </tr>
+            <tr>
+                <td>Мастер и Маргарита</td>
+                <td>Михаил Булгаков</td>
+                <td>Фэнтези</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <label for="bookName">Название книги:</label>
+        <input type="text" id="bookName" name="bookName" required>
+
+        <label for="author">Автор:</label>
+        <input type="text" id="author" name="author" required>
+
+        <label for="genre">Жанр:</label>
+        <input type="text" id="genre" name="genre" required>
+
+        <input type="submit" value="Добавить книгу">
+    </form>
+</body>
+</html>

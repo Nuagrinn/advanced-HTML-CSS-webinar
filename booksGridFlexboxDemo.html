@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>CSS Grid Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-rows: 100px 1fr 50px;
+      grid-template-columns: 200px 1fr;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      display: flex;
+      background-color: #3498db;
+      color: white;
+      font-size: 24px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      display: flex;
+      background-color: #2ecc71;
+      padding: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .main-content {
+      grid-area: main;
+      background-color: #ffffff;
+      padding: 10px;
+      display: block;
+      grid-template-rows: 1fr;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #989898;
+        text-align: center;
+    }
+
+    input[type="text"]{
+      border-radius: 8px; /* Радиус скругления углов (делает кнопку округлой) */
+    }
+
+    input[type="submit"] {
+        cursor: pointer;
+        margin-top: 30px; /* Верхний отступ 10px */
+        margin-bottom: 15px; /* Нижний отступ 10px */
+        margin-left: 0; /* Левый отступ 0 (если нужен) */
+        margin-right: 0; /* Правый отступ 0 (если нужен) */
+        padding: 10px 20px;
+        border-radius: 8px; /* Радиус скругления углов (делает кнопку округлой) */
+    }
+
+    .footer {
+      grid-area: footer;
+      display: flex;
+      background-color: #34495e;
+      color: white;
+      padding: 20px;
+      align-items: center;
+      justify-content: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Мои любимые книги</div>
+    <div class="sidebar">
+      <form>
+        <label for="bookName">Название книги:</label>
+        <input type="text" id="bookName" name="bookName" required>
+
+        <label for="author">Автор:</label>
+        <input type="text" id="author" name="author" required>
+
+        <label for="genre">Жанр:</label>
+        <input type="text" id="genre" name="genre" required>
+
+        <input type="submit" value="Добавить книгу">
+      </form>
+    </div>
+    <div class="main-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Название книги</th>
+            <th>Автор</th>
+            <th>Жанр</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Война и мир</td>
+            <td>Лев Толстой</td>
+            <td>Роман</td>
+          </tr>
+          <tr>
+            <td>1984</td>
+            <td>Джордж Оруэлл</td>
+            <td>Антиутопия</td>
+          </tr>
+          <tr>
+            <td>Белая Гвардия</td>
+            <td>Михаил Булгаков</td>
+            <td>Роман</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">By Vladislav Keller</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Flexbox Gallery Example</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.gallery-item {
+  flex: 0 1 300px; /* Гибкость, сжимаемость и базовая ширина элемента */
+  text-align: center;
+  padding: 20px;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-info {
+  margin-top: 15px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="image1.jpg" alt="Image 1">
+      <div class="item-info">
+        <h3>Photo 1</h3>
+        <p>Description for photo 1.</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="image2.jpg" alt="Image 2">
+      <div class="item-info">
+        <h3>Photo 2</h3>
+        <p>Description for photo 2.</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="image3.jpg" alt="Image 3">
+      <div class="item-info">
+        <h3>Photo 3</h3>
+        <p>Description for photo 3.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
